@@ -56,9 +56,9 @@
 
       ul {
         list-style: none;
+        padding: 0;
         display: flex;
         flex-direction: column;
-        margin-bottom: $spacing-lg;
         @include breakpoint(md) {
           flex-direction: row;
           align-items: center;
@@ -66,6 +66,11 @@
           margin-right: calc(0.5rem + #{$spacing-md});
         }
         li {
+          margin-bottom: $spacing-lg;
+          @include breakpoint(md) {
+            margin-bottom: 0;
+          }
+
           a {
             text-decoration: none;
             color: inherit;
